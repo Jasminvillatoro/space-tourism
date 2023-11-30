@@ -1,14 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* COLORS
+dark
+#0b0d17
+light purple
+#d0d6f9
+white
+#fff
+*/
 
-:root {
-}
+/* TYPOGRAPHY
+h1 - Bellefair regular 150px
+h2 - Bellefair regular 100px
+h3 - Bellefair regular 56px
+h4 - Bellefair regular 32px
+h5 - Barlow Condensed regular 28px - 4.75 character space
 
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
+// SubHeading h6
+subheading 1 - h6 - Bellefair regular 28px - distance KM
+subheading 2 - h5 -  Barlow Condensed regular 14px - 2.35 character space
+
+// Nav Text
+nav text -  Barlow Condensed regular 16px - 2.7 character space
+
+ // Body Text
+ 18px 
+ line height 32px
+*/
+
+html {
+  font-family: var(--font-Bellefair);
 }
 
 body {
+  padding: 0;
+}
+
+h5,
+p {
+  font-family: var(--font-barlow-condensed);
 }
