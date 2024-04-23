@@ -29,14 +29,17 @@ nav text -  Barlow Condensed regular 16px - 2.7 character space
  line height 32px
 */
 
-html {
-  font-family: var(--font-Bellefair);
-}
-
-body {
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
+@layer utilities {
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+}
+// p barlow regular 18px
 h5,
 p {
   font-family: var(--font-barlow-condensed);
