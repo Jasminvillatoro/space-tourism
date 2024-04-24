@@ -1,14 +1,18 @@
-import React from 'react';
+import Image from 'next/image';
+import logo from '/Users/jasminvillatoro/space-tourism/public/assets/shared/logo.svg';
+import hamburger from '/Users/jasminvillatoro/space-tourism/public/assets/shared/icon-hamburger.svg';
 
 export const Navbar = () => {
-  return <div className=''>Nav</div>;
+  return (
+    <div className='flex justify-between items-center mt-6 mx-6'>
+      <Image src={logo} alt='logo' width={40} height={40} />
+      <Image
+        src={hamburger}
+        alt='hamburger menu'
+        width={21}
+        height={24}
+        className='w-[21px] h-6'
+      />
+    </div>
+  );
 };
-{
-  /* <h1 className=''>Earth H1</h1>
-<h2>Venus H2</h2>
-<h3>Jupiter H3</h3>
-<h4>Uranus H4</h4>
-<h5>SO YOU H5</h5>
-<h6>384,400KM H6</h6>
-<p>AVG.DISTANCE P</p> */
-}
