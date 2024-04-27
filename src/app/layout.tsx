@@ -12,7 +12,7 @@ const bellefair = Bellefair({
 
 const barlowCondensed = Barlow_Condensed({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['100', '200', '400'],
   style: 'normal',
   variable: '--font-barlow-condensed',
 });
@@ -31,8 +31,8 @@ export default function RootLayout({
     <html
       lang='en'
       className={`
-    ${bellefair.variable} ${barlowCondensed.variable}`}>
-      <body className='text-pink-500'>
+    ${bellefair.variable}  ${barlowCondensed.variable}`}>
+      <body className='text-white mx-auto max-w-[1440px] border-2 border-red-600'>
         <Navbar />
         {children}
         <Footer />
