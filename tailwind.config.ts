@@ -9,12 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          'var(--font-bellefair)',
-          'var(--font-barlow-condensed)',
-          'ui-sans-serif',
-          'system-ui',
-        ],
+        sans: ['var(--font-bellefair)', 'ui-sans-serif', 'system-ui'],
+        barlow: ['var(--font-barlow-condensed)'],
       },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
