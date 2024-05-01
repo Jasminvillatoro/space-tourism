@@ -31,8 +31,8 @@ export default function RootLayout({
     <html
       lang='en'
       className={`
-    ${bellefair.variable}  ${barlowCondensed.variable}`}>
-      <body className='text-white mx-auto max-w-[1440px] border-2 border-red-600'>
+    ${bellefair.variable}  ${barlowCondensed.variable} `}>
+      <body className='text-white mx-auto max-w-[1440px] bg-gray-500'>
         <Navbar />
         {children}
         <Footer />

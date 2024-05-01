@@ -5,11 +5,11 @@ export const Background = () => {
   return (
     <Image
       alt='space background image'
-      placeholder='blur'
       src={backGroundImage}
+      placeholder='blur'
       quality={100}
-      fill
       sizes='100vw'
+      fill
       className='object-cover -z-10'></Image>
   );
 };

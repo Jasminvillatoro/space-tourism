@@ -41,6 +41,7 @@ nav text -  Barlow Condensed regular 16px - 2.7 character space
 }
 // p barlow regular 18px
 h5,
+h2,
 p {
   font-family: var(--font-barlow-condensed);
 }
