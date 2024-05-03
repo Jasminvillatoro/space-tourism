@@ -1,3 +1,3 @@
-export default function Page() {
-	return <div className='text-xl text-black'>Destination</div>;
-  }
+export default function Destination() {
+  return <div className='text-xl text-black'>Destination</div>;
+}
