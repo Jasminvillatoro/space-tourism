@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Bellefair, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
-import { Navbar } from './components/Navbar';
-import { Footer } from './components/Footer';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 const bellefair = Bellefair({
   subsets: ['latin'],
