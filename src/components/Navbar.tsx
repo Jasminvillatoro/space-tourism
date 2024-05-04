@@ -8,7 +8,8 @@ import { useState } from 'react';
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const toggle = () => {
+  const toggle = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
     setIsOpen(!isOpen);
   };
   return (
