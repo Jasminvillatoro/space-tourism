@@ -1,3 +1,4 @@
+import { SolarSystemInfo } from '@/components/SolarSystemInfo';
 import destinationMobile from '../../../public/assets/destination/background-destination-mobile.jpg';
 import Image from 'next/image';
 export default function Destination() {
@@ -12,7 +13,7 @@ export default function Destination() {
         fill
         sizes='100vw'
         className='object-cover -z-10  '></Image>
-      {/* <div className='w-20 h-20 bg-white '></div> */}
+      <SolarSystemInfo />
     </div>
   );
 }
