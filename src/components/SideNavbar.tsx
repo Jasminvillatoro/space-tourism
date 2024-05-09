@@ -8,15 +8,14 @@ type Props = {
 };
 export const SideNavbar = (props: Props) => {
   return (
-    <div
-      className='absolute -top-[64px] right-0 font-barlow font-thin uppercase '
-      onClick={props.toggle}>
+    <div className='absolute -top-[64px] right-0 font-barlow font-thin uppercase '>
       {props.isOpen ? (
-        <div className='w-64 h-screen backdrop-blur-2xl flex flex-col'>
+        <div
+          className='w-64 h-screen backdrop-blur-2xl flex flex-col'
+          onClick={props.toggle}>
           <Image
             src={hamburgerClose}
             alt='hamburger menu'
-            // onClick={closeMenu}
             className='w-[21px] h-6 float-right ml-auto mr-6 mt-6'
           />
           {/* create array of objects later on and map through it */}
@@ -24,7 +23,7 @@ export const SideNavbar = (props: Props) => {
             <li>
               <Link href='/' className='tracking-[0.169rem]'>
                 <p>
-                  <span className='font-bold  '>00 </span>Home
+                  <span className='font-bold'>00 </span>Home
                 </p>
               </Link>
             </li>
@@ -53,9 +52,7 @@ export const SideNavbar = (props: Props) => {
             </li>
           </ul>
         </div>
-      ) : (
-        ''
-      )}
+      ) : null}
     </div>
   );
 };
