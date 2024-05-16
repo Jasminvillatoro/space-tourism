@@ -1,3 +1,3 @@
 export default function Technology() {
-  return <div className='text-xl text-black'>Technology</div>;
+  return <main className='text-xl text-black'>Technology</main>;
 }

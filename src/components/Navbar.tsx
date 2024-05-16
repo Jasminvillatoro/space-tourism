@@ -13,7 +13,7 @@ export const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <>
+    <header>
       <div className='flex justify-between items-center mt-6 mx-auto max-w-[327px]'>
         <Image src={logo} alt='logo' width={40} height={40} />
         <Image
@@ -28,6 +28,6 @@ export const Navbar = () => {
       <div className='relative'>
         <SideNavbar isOpen={isOpen} toggle={toggle} />
       </div>
-    </>
+    </header>
   );
 };
