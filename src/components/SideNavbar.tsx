@@ -16,7 +16,9 @@ export const SideNavbar = (props: Props) => {
           <Image
             src={hamburgerClose}
             alt='hamburger menu'
-            className='w-[21px] h-6 float-right ml-auto mr-6 mt-6'
+            width={21}
+            height={6}
+            className='w-auto h-auto float-right ml-auto mr-6 mt-6'
           />
           {/* create array of objects later on and map through it */}
           <ul className='mt-14 ml-10 flex flex-col gap-6'>
