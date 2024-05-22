@@ -4,9 +4,10 @@ import moon from '../../public/assets/destination/image-moon.png';
 import { spaceInfo } from '../app/information/space-info';
 import Link from 'next/link';
 // import { spaceFacts } from '../app/information/space-info';
+// I'm just going to create a new page for every moon or planet I will need a dynamic route
 export const SolarSystemInfo = () => {
   return (
-    <div className='mt-14'>
+    <div className='mt-14 flex flex-col items-center'>
       <h2>01 PICK YOUR DESTINATION</h2>
       <Image src={moon} alt='moon' width={170} height={170} />
       <ul className='flex'>

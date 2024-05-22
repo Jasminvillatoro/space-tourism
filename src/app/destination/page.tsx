@@ -3,8 +3,7 @@ import destinationMobile from '../../../public/assets/destination/background-des
 import Image from 'next/image';
 export default function Destination() {
   return (
-    <main className='text-xl text-white relative -z-10 overflow-hidden h-screen w-screen -mt-16'>
-      DESTINATION
+    <main className='text-xl text-white relative -z-10 overflow-hidden h-screen w-screen -mt-16 '>
       <Image
         src={destinationMobile}
         alt='destination background'
@@ -12,7 +11,7 @@ export default function Destination() {
         quality={100}
         fill
         sizes='100vw'
-        className='object-cover -z-10  '></Image>
+        className='object-cover -z-10'></Image>
       <SolarSystemInfo />
     </main>
   );
