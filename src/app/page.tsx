@@ -7,7 +7,6 @@ export default function Home() {
       <Background />
       <HeroText />
       <HomeCircle />
-      Page
     </main>
   );
 }

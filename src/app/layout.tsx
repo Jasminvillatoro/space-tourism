@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Bellefair, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
 
 const bellefair = Bellefair({
   subsets: ['latin'],
@@ -32,10 +31,9 @@ export default function RootLayout({
       lang='en'
       className={`
     ${bellefair.variable}  ${barlowCondensed.variable} `}>
-      <body className='text-white mx-auto max-w-[1440px] bg-gray-500'>
+      <body className='text-white mx-auto max-w-[1440px] '>
         <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
