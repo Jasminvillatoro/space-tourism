@@ -3,7 +3,7 @@ import destinationMobile from '../../../public/assets/destination/background-des
 import Image from 'next/image';
 export default function Destination() {
   return (
-    <main className='h-full w-screen text-xl text-white  -z-20 overflow-hidden -mt-40'>
+    <main className='h-full w-screen text-xl text-white -z-20 overflow-hidden -mt-40'>
       <div className='relative h-full w-screen'>
         <Image
           src={destinationMobile}
