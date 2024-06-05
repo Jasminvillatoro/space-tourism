@@ -1,14 +1,16 @@
-export type spaceFacts = {
-  id: number;
-  name: string;
-  description: string;
-  distance: string;
-  travelTime: string;
-};
-export const spaceInfo: spaceFacts[] = [
+// export type spaceFacts = {
+//   id: number;
+//   name: string;
+//   description: string;
+//   distance: string;
+//   travelTime: string;
+// };
+// import moon from '../../../public/assets/destination/image-moon.png';
+export const spaceObjects = [
   {
     id: 1,
-    name: 'Moon',
+    image: '/../../../public/assets/destination/image-moon.png',
+    name: 'MOON',
     description:
       'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.',
     distance: '384,400 km',
@@ -16,7 +18,8 @@ export const spaceInfo: spaceFacts[] = [
   },
   {
     id: 2,
-    name: 'Mars',
+    image: '@public/assets/destination/image-mars.png',
+    name: 'MARS',
     description:
       'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!',
     distance: '225 MIL. km',
@@ -39,3 +42,4 @@ export const spaceInfo: spaceFacts[] = [
     travelTime: '7 years',
   },
 ];
+// console.log(spaceObjects);

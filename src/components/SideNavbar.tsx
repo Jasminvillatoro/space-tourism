@@ -30,7 +30,7 @@ export const SideNavbar = (props: Props) => {
               </Link>
             </li>
             <li>
-              <Link href='/destination' className='tracking-[0.169rem]'>
+              <Link href='/destination/1' className='tracking-[0.169rem]'>
                 <p>
                   <span className='font-bold  '>01 </span>
                   Destination

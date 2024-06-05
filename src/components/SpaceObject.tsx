@@ -3,7 +3,6 @@ import Image from 'next/image';
 import moon from '../../public/assets/destination/image-moon.png';
 import Link from 'next/link';
 import { spaceObjects } from '@/app/lib/spaceObjects';
-// work on trying to get the date to display
 
 export const SpaceObject = () => {
   return (
