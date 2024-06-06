@@ -3,19 +3,8 @@ import destinationMobile from '../../../../public/assets/destination/background-
 import Image from 'next/image';
 
 // Make fetch request here
-const getDestinations = async () => {
-  // masked as an api end point using json-server
-  const res = await fetch(' http://localhost:4000/destinations');
-  if (!res.ok) {
-    throw new Error('Failed to fetch');
-  }
-  return res.json();
-};
 
-export default async function SpaceObjectPage() {
-  const destinations = await getDestinations();
-  console.log(destinations);
-
+export default function SpaceObjectPage() {
   return (
     // <section className='bg-slate-400 flex flex-col items-center'>
     //   {/* pass down the slug stuff */}

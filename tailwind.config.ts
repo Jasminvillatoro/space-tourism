@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-bellefair)', 'ui-sans-serif', 'system-ui'],
         barlow: ['var(--font-barlow-condensed)'],
+        bellefair: ['var(--font-bellefair)'],
       },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
