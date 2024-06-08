@@ -11,14 +11,14 @@ export const SideNavbar = (props: Props) => {
     <div className='absolute -top-[64px] right-0 font-barlow font-thin uppercase '>
       {props.isOpen ? (
         <div
-          className='w-64 h-screen backdrop-blur-2xl flex flex-col'
+          className='w-64 h-screen backdrop-blur-2xl flex flex-col hover:cursor-pointer'
           onClick={props.toggle}>
           <Image
             src={hamburgerClose}
             alt='hamburger menu'
             width={21}
             height={6}
-            className='w-auto h-auto float-right ml-auto mr-6 mt-6'
+            className='w-auto h-auto float-right ml-auto mr-6 mt-6  '
           />
           {/* create array of objects later on and map through it */}
           <ul className='mt-14 ml-10 flex flex-col gap-6'>
@@ -30,7 +30,7 @@ export const SideNavbar = (props: Props) => {
               </Link>
             </li>
             <li>
-              <Link href='/destination/1' className='tracking-[0.169rem]'>
+              <Link href='/destination' className='tracking-[0.169rem]'>
                 <p>
                   <span className='font-bold  '>01 </span>
                   Destination
