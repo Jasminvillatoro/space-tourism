@@ -1,20 +1,17 @@
-// import { SolarSystemInfo } from '@/components/SolarSystemInfo';
-// import destinationMobile from '../../../public/assets/destination/background-destination-mobile.jpg';
-// import Image from 'next/image';
-// export default function Destination() {
-//   return (
-//     // <main className='h-full w-screen text-xl text-white -z-20 overflow-hidden -mt-40'>
-//     //   <div className='relative h-full w-screen'>
-//     //     <Image
-//     //       src={destinationMobile}
-//     //       alt='destination background'
-//     //       placeholder='blur'
-//     //       quality={100}
-//     //       fill
-//     //       sizes='100vw'
-//     //       className='object-cover -z-10'></Image>
-//     //     <SolarSystemInfo />
-//     //   </div>
-//     // </main>
-//   );
-// }
+import { SpaceObject } from '@/components/SpaceObject';
+
+import DestinationBackground from '@/components/DestinationBackground';
+
+export default function DestinationPage() {
+  return (
+    <main className='h-full text-xl text-white -z-20 -mt-40'>
+      <DestinationBackground />
+      <div className='flex flex-col items-center pt-44 pb-12'>
+        <h2 className='font-barlow tracking-[0.169rem] text-sm'>
+          <span className='opacity-25'>01 </span>PICK YOUR DESTINATION
+        </h2>
+        <SpaceObject />
+      </div>
+    </main>
+  );
+}
