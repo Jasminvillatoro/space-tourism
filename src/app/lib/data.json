@@ -3,6 +3,7 @@
     {
       "id": "1",
       "name": "Moon",
+      "href": "/destination/1",
       "images": {
         "png": "./assets/destination/image-moon.png",
         "webp": "./assets/destination/image-moon.webp"
@@ -14,6 +15,7 @@
     {
       "id": "2",
       "name": "Mars",
+      "href": "/destination/2",
       "images": {
         "png": "./assets/destination/image-mars.png",
         "webp": "./assets/destination/image-mars.webp"
@@ -25,6 +27,7 @@
     {
       "id": "3",
       "name": "Europa",
+      "href": "/destination/3",
       "images": {
         "png": "./assets/destination/image-europa.png",
         "webp": "./assets/destination/image-europa.webp"
@@ -36,6 +39,7 @@
     {
       "id": "4",
       "name": "Titan",
+      "href": "/destination/4",
       "images": {
         "png": "./assets/destination/image-titan.png",
         "webp": "./assets/destination/image-titan.webp"
