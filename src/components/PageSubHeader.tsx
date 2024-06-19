@@ -7,7 +7,7 @@ export default function PageSubHeader({
 }) {
   return (
     <>
-      <h2 className='font-barlow tracking-[0.169rem] text-sm text-white'>
+      <h2 className='font-barlow tracking-[0.169rem] text-lg text-white'>
         <span className='opacity-25'>{order} </span> {title}
       </h2>
     </>
