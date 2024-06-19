@@ -22,20 +22,3 @@ export default function SpaceNavPath(item: TSpaceFacts) {
     </>
   );
 }
-
-{
-  /* <li
-className={`pb-1 border-b-4 border-b-transparent border-b-white ${
-  destination.href === ref
-	? 'active:border-b-white'
-	: 'active:border-b-pink-600'
-} `}
-key={item.id}>
-<Link href={ref}>
-  <p
-	className={`font-barlow text-sm text-[#D0D6F9] hover:text-white`}>
-	{item.name}
-  </p>
-</Link>
-</li> */
-}

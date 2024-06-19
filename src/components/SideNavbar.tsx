@@ -32,7 +32,7 @@ export const SideNavbar = (props: Props) => {
             <li>
               <Link href='/destination/1' className='tracking-[0.169rem]'>
                 <p>
-                  <span className='font-bold  '>01 </span>
+                  <span className='font-bold'>01 </span>
                   Destination
                 </p>
               </Link>

@@ -1,6 +1,6 @@
 import TSpaceFacts from '@/app/lib/types/TSpaceFacts';
 import DestinationBackground from '@/components/DestinationBackground';
-import DestinationHeader from '@/components/DestinationHeader';
+import Title from '@/components/PageSubHeader';
 import SpaceObjectsNav from '@/components/SpaceObjectsNav';
 import Image from 'next/image';
 
@@ -29,10 +29,10 @@ export default async function SpaceObjectPage({
   return (
     <div className='flex flex-col justify-center items-center pt-10 pb-12'>
       <DestinationBackground />
-      <DestinationHeader />
+      <Title order='01' title='PICK YOUR DESTINATION' />
       <Image
         src={`/${destination.images.png}`}
-        alt='moon'
+        alt='crew member'
         width={170}
         height={170}
         className='mt-8'
