@@ -16,7 +16,7 @@ export default async function TechNav() {
 
   return (
     <>
-      <ul className='flex gap-x-4 mt-8 font-barlow tracking-[0.169rem] text-xs'>
+      <ul className='flex gap-x-4 mt-10 mb-6 font-barlow tracking-[0.169rem] text-xs'>
         {data.map((item: TTech) => {
           return <TechPath key={item.id} id={item.id} name={item.name} />;
         })}

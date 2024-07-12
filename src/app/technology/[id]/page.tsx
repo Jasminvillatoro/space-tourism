@@ -37,9 +37,13 @@ export default async function Technology({
         className='mt-8 w-[375px]'
       />
       <TechNav />
-      <h2 className='text-[#D0D6F9]'>THE TERMINOLOGY…</h2>
-      <h1 className='text-white'>{tech.name}</h1>
-      <p className='w-[327px] px-6 font-barlow text-center text-base bg-opacity-60 text-[#D0D6F9] leading-7 tracking-wide font-extralight pb-8'>
+      <h2 className='font-barlow text-[#D0D6F9] text-sm tracking-widest font-thin mb-2'>
+        THE TERMINOLOGY…
+      </h2>
+      <h1 className='text-white text-2xl uppercase tracking-wide mb-3'>
+        {tech.name}
+      </h1>
+      <p className='w-[327px] h-[175px] align-top  font-barlow text-center text-base bg-opacity-60 text-[#D0D6F9] leading-7 tracking-wider font-extralight'>
         {tech.description}
       </p>
     </main>
