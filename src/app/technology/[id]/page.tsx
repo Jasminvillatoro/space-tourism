@@ -16,7 +16,6 @@ export async function generateStaticParams() {
 async function getTech(id: string) {
   const res = await fetch(`http://localhost:4000/technology/${id}`);
   const data = await res.json();
-  console.log(data);
   return data;
 }
 export default async function Technology({
