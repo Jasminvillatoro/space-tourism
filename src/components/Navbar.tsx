@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
-import logo from '/Users/jasminvillatoro/space-tourism/public/assets/shared/logo.svg';
-import hamburger from '/Users/jasminvillatoro/space-tourism/public/assets/shared/icon-hamburger.svg';
+import logo from 'public/assets/shared/logo.svg';
+import hamburger from 'public/assets/shared/icon-hamburger.svg';
 import { SideNavbar } from './SideNavbar';
 import { useState } from 'react';
 import Link from 'next/link';
