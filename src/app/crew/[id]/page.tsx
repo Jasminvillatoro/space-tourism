@@ -1,39 +1,32 @@
 import CrewBg from '@/components/CrewBg';
 import Title from '@/components/PageSubHeader';
-import TCrew from '@/app/lib/types/TCrew';
+import type { TCrew } from '@/app/lib/types/TCrew';
 import Image from 'next/image';
 import CrewNav from '@/components/CrewNav';
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import crewData from '../../lib/crewData.json';
 
-export async function generateStaticParams() {
-  const res = await fetch('http://localhost:4000/crew/');
-  const data = await res.json();
+type Props = {
+  crew: TCrew;
+};
 
-  return data.map((item: TCrew) => ({
-    id: item.id,
-  }));
-}
-
-async function getCrew(id: string) {
-  const res = await fetch(`http://localhost:4000/crew/${id}`);
-  const data = await res.json();
-  console.log(data);
-  return data;
-}
-export default async function page({ params }: { params: { id: string } }) {
-  const crew = await getCrew(params.id);
+const CrewPage: NextPage<Props> = ({ crew }) => {
   return (
     <main className='text-black flex flex-col justify-center items-center pt-10 pb-12'>
       <CrewBg />
       <Title order='02' title='MEET YOUR CREW' />
+
       <Image
         src={`/${crew.images.png}`}
-        alt='moon'
+        alt={crew.name}
         width={170}
         height={170}
         className='mt-8 ml-8'
       />
+
       <div className='h-[1px] w-80 bg-white/10'></div>
       <CrewNav />
+
       <h2 className='mt-8 font-bellefair text-white opacity-50 text-xs text-center uppercase tracking-widest w-[108px]'>
         {crew.role}
       </h2>
@@ -45,4 +38,21 @@ export default async function page({ params }: { params: { id: string } }) {
       </p>
     </main>
   );
-}
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: crewData.map((c) => ({ params: { id: c.id } })),
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
+  const crew = crewData.find((c) => c.id === params?.id);
+  if (!crew) {
+    return { notFound: true };
+  }
+  return { props: { crew } };
+};
+
+export default CrewPage;

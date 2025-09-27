@@ -19,11 +19,12 @@ async function getDestination(id: string) {
   return data;
 }
 
-export default async function SpaceObjectPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function SpaceObjectPage(
+  props: {
+    params: Promise<{ id: string }>;
+  }
+) {
+  const params = await props.params;
   const destination = await getDestination(params.id);
 
   return (
