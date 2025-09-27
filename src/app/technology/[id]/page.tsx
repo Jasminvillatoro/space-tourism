@@ -3,26 +3,19 @@ import Title from '@/components/PageSubHeader';
 import TTech from '@/app/lib/types/TTech';
 import Image from 'next/image';
 import TechNav from '@/components/TechNav';
-
-export async function generateStaticParams() {
-  const res = await fetch('http://localhost:4000/technology/');
-  const data = await res.json();
-
-  return data.map((item: TTech) => ({
-    id: item.id,
-  }));
-}
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
 async function getTech(id: string) {
   const res = await fetch(`http://localhost:4000/technology/${id}`);
   const data = await res.json();
   return data;
 }
-export default async function Technology({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function Technology(
+  props: {
+    params: Promise<{ id: string }>;
+  }
+) {
+  const params = await props.params;
   const tech = await getTech(params.id);
   return (
     <main className='text-black flex flex-col justify-center items-center pt-10 pb-12'>

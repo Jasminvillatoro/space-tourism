@@ -1,9 +1,8 @@
 import TImages from './TImages';
-type TCrew = {
+export type TCrew = {
   id?: string;
-  name?: string;
-  images?: TImages;
+  name: string;
+  images: TImages;
   role?: string;
   bio?: string;
 };
-export default TCrew;
