@@ -39,13 +39,7 @@ nav text -  Barlow Condensed regular 16px - 2.7 character space
     @apply mx-auto max-w-[1440px];
   }
 }
-body {
-  background-image: url('../../public/assets/home/background-home-desktop.jpg'); /* Path relative to public folder */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Optional: keeps background fixed on scroll */
-}
+
 h5,
 h2,
 p {
