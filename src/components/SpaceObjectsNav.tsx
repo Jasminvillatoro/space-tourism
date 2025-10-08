@@ -1,28 +1,43 @@
-// import Link from 'next/link';
-import TSpaceFacts from '@/app/lib/types/TSpaceFacts';
 import SpaceNavPath from './SpaceNavPath';
-
-const getDestinations = async () => {
-  // masked as an api end point using json-server
-  const res = await fetch('http://localhost:4000/destinations/');
-  const data = await res.json();
-  // console.log(data);
-  if (!res.ok) {
-    throw new Error('Failed to fetch');
-  }
-  return data;
-};
+import { prisma } from '@/lib/prisma';
 
 export default async function SpaceObjectsNav() {
-  const data = await getDestinations();
+  const destinations = await prisma.destination.findMany(); // runs only on server
 
   return (
     <>
-      <ul className='flex gap-x-4 mt-8 font-barlow tracking-[0.169rem] text-xs'>
-        {data.map((item: TSpaceFacts) => {
-          return <SpaceNavPath key={item.id} id={item.id} name={item.name} />;
-        })}
+      <ul className='flex justify-center items-center gap-x-4 mt-8 font-barlow tracking-[0.169rem] text-xs  '>
+        {destinations.map((destination) => (
+          <SpaceNavPath
+            key={destination.id}
+            destination={destination}
+            id={destination.id}
+          />
+        ))}
       </ul>
     </>
   );
 }
+
+// <>
+//     <ul className='flex gap-x-4 mt-8 font-barlow tracking-[0.169rem] text-xs'>
+//       return <SpaceNavPath/>;
+//     </ul>
+//   </>
+
+// <>
+//   <ul className='flex gap-x-4 mt-8 font-barlow tracking-[0.169rem] text-xs'>
+//     {destinations.map((destination) => (
+//       <div key={destination.id}>
+//         <li className='pb-1'>
+//           <Link href={`/destination/${destination.id}`}>
+//             <p
+//               className={`font-barlow text-sm text-[#D0D6F9] hover:text-white`}>
+//               {destination.name}
+//             </p>
+//           </Link>
+//         </li>
+//       </div>
+//     ))}
+//   </ul>
+// </>
