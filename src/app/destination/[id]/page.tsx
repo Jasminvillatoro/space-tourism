@@ -9,8 +9,11 @@ export default async function SpaceObjectPage({
 }: {
   params: { id: string };
 }) {
-  const id = Number(params.id);
-  const destination = await prisma.destination.findUnique({ where: { id } });
+  const { id } = await params;
+  const destinationId = Number(id);
+  const destination = await prisma.destination.findUnique({
+    where: { id: destinationId },
+  });
 
   if (!destination) return <h1>Destination not found</h1>;
   return (
