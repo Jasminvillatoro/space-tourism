@@ -17,3 +17,18 @@ model Destination {
   distance    String
   travel      String
 }
+
+model Crew {
+  id     Int     @id @default(autoincrement())
+  name   String
+  images String?
+  role   String
+  bio    String
+}
+
+model Technology {
+  id          Int     @id @default(autoincrement())
+  name        String
+  images      String?
+  description String
+}
