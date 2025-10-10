@@ -4,7 +4,11 @@ import Image from 'next/image';
 import CrewNav from '@/components/CrewNav';
 import { prisma } from '@/lib/prisma';
 
-export default async function CrewPage({ params }: { params: { id: string } }) {
+export default async function CrewPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const crewId = Number(id);
   const crew = await prisma.crew.findUnique({

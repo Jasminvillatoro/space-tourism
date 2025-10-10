@@ -7,7 +7,7 @@ import { prisma } from '@/lib/prisma';
 export default async function Technology({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
   const technologyId = Number(id);
