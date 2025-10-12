@@ -18,7 +18,7 @@ export default async function SpaceObjectPage({
   if (!destination) return <h1>Destination not found</h1>;
   return (
     <>
-      <main className='pt-10 pb-12'>
+      <main className='pt-10 pb-12 flex flex-col justify-center items-center'>
         <div
           key={destination.id}
           className='flex flex-col justify-center items-center '>
