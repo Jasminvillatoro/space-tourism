@@ -21,7 +21,6 @@ export default async function CrewPage({
       <main className='text-black flex flex-col justify-center items-center pt-10 pb-12'>
         <CrewBg />
         <Title order='02' title='MEET YOUR CREW' />
-
         <Image
           src={`/${crew.images}`}
           alt={crew.name}
@@ -29,10 +28,8 @@ export default async function CrewPage({
           height={170}
           className='mt-8 ml-8'
         />
-
         <div className='h-[1px] w-80 bg-white/10'></div>
         <CrewNav />
-
         <h2 className='mt-8 font-bellefair text-white opacity-50 text-xs text-center uppercase tracking-widest w-[108px]'>
           {crew.role}
         </h2>
