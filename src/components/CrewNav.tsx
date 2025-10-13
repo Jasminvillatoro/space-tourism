@@ -2,7 +2,11 @@ import CrewPath from './CrewPath';
 import { prisma } from '@/lib/prisma';
 
 export default async function CrewNav() {
-  const crew = await prisma.crew.findMany();
+  const crew = await prisma.crew.findMany({
+    orderBy: {
+      id: 'asc',
+    },
+  });
 
   return (
     <>
