@@ -160,6 +160,10 @@ const config = {
         "fromEnvVar": null,
         "value": "darwin-arm64",
         "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "rhel-openssl-3.0.x"
       }
     ],
     "previewFeatures": [],
@@ -186,8 +190,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Destination {\n  id          Int     @id @default(autoincrement())\n  name        String\n  href        String\n  images      String?\n  description String\n  distance    String\n  travel      String\n}\n\nmodel Crew {\n  id     Int     @id @default(autoincrement())\n  name   String\n  images String?\n  role   String\n  bio    String\n}\n\nmodel Technology {\n  id          Int     @id @default(autoincrement())\n  name        String\n  images      String?\n  description String\n}\n",
-  "inlineSchemaHash": "1b11ac1561ffcdf7c4ca2bbb84dd824ff7d1481630efdf2165f3d943fa6a3bc9",
+  "inlineSchema": "generator client {\n  provider      = \"prisma-client-js\"\n  output        = \"../src/generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Destination {\n  id          Int     @id @default(autoincrement())\n  name        String\n  href        String\n  images      String?\n  description String\n  distance    String\n  travel      String\n}\n\nmodel Crew {\n  id     Int     @id @default(autoincrement())\n  name   String\n  images String?\n  role   String\n  bio    String\n}\n\nmodel Technology {\n  id          Int     @id @default(autoincrement())\n  name        String\n  images      String?\n  description String\n}\n",
+  "inlineSchemaHash": "03325e3629ee5d61d5a2cf1a342fdf2b96ffa811768123a981ab5640e3db7609",
   "copyEngine": true
 }
 config.dirname = '/'
