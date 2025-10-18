@@ -1,9 +1,8 @@
 'use client';
 import Image from 'next/image';
-import logo from '../../public/assets/shared/logo.svg';
+import { NavLogo } from './NavLogo';
 import { SideNavbar } from './SideNavbar';
 import { useState } from 'react';
-import Link from 'next/link';
 import hamburger from '../../public/assets/shared/icon-hamburger.svg';
 
 export const Navbar = () => {
@@ -15,16 +14,8 @@ export const Navbar = () => {
   };
   return (
     <header>
-      <div className='flex justify-between items-center mt-6 mx-auto max-w-[327px]'>
-        <Link href='/'>
-          <Image
-            src={logo}
-            alt='logo'
-            width={40}
-            height={40}
-            className='hover:cursor-pointer'
-          />
-        </Link>
+      <div className='flex justify-between items-center mt-6 mx-auto max-w-[327px] md:hidden'>
+        <NavLogo />
         <Image
           src={hamburger}
           alt='hamburger menu'

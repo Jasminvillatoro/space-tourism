@@ -1,7 +1,7 @@
 export const HeroText = () => {
   return (
     <div className='flex flex-col items-center max-w-[327px] mx-auto md:mt-10'>
-      <h2 className='font-barlow tracking-[0.144em] mt-12 mb-2 text-base font-thin md:text-xl md:mb-0'>
+      <h2 className='text-[#d0d6f9] font-barlow tracking-[0.144em] mt-12 mb-2 text-base font-thin md:text-xl md:mb-0'>
         SO, YOU WANT TO TRAVEL TO
       </h2>
       <h1 className='text-[5rem] md:text-[150px] md:-mb-6'>SPACE</h1>
