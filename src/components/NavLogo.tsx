@@ -11,7 +11,7 @@ export const NavLogo = () => {
           alt='logo'
           width={40}
           height={40}
-          className='hover:cursor-pointer md:w-[48px] md:h-[48px]'
+          className='hover:cursor-pointer md:w-[48px] md:h-[48px] lg:ml-10'
         />
       </Link>
     </div>
