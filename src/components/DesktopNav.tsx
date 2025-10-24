@@ -18,10 +18,10 @@ export const DesktopNav = () => {
   ];
 
   return (
-    <div className='hidden lg:block '>
-      <div className='flex justify-around items-center w-[1385px] h-24 mt-10 pl-10'>
+    <div className='hidden lg:block'>
+      <div className='flex justify-center items-center w-[1064px] h-24 mt-10 pl-10'>
         <NavLogo />
-        <hr className='w-[380px] border-0 border-b border-white/20' />
+        <hr className='w-[110px] border-0 border-b border-white/20' />
         <ul className='h-24 w-[830px] flex justify-around items-center inset-0 bg-gradient-to-r from-transparent to-black/20 backdrop-blur-md'>
           {pages.map((page) => {
             return (
