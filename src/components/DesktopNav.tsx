@@ -3,7 +3,7 @@ import { NavLogo } from './NavLogo';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export const TabletNav = () => {
+export const DesktopNav = () => {
   const currentPath = usePathname();
   interface Page {
     href: string;
@@ -11,17 +11,18 @@ export const TabletNav = () => {
   }
 
   const pages: Page[] = [
-    { href: '/', page: 'HOME' },
-    { href: '/destination/1', page: 'DESTINATION' },
-    { href: '/crew/1', page: 'CREW' },
-    { href: '/technology/1', page: 'TECHNOLOGY' },
+    { href: '/', page: '00 HOME' },
+    { href: '/destination/1', page: '01 DESTINATION' },
+    { href: '/crew/1', page: '02 CREW' },
+    { href: '/technology/1', page: '03 TECHNOLOGY' },
   ];
 
   return (
-    <div className='hidden md:block w-[729px] h-24 lg:hidden'>
-      <div className='flex items-center justify-between mt-4 pl-6 pt-1'>
+    <div className='hidden lg:block '>
+      <div className='flex justify-around items-center w-[1385px] h-24 mt-10 pl-10'>
         <NavLogo />
-        <ul className='flex justify-center-safe items-center'>
+        <hr className='w-[380px] border-0 border-b border-white/20' />
+        <ul className='h-24 w-[830px] flex justify-around items-center inset-0 bg-gradient-to-r from-transparent to-black/20 backdrop-blur-md'>
           {pages.map((page) => {
             return (
               <li key={page.href}>
@@ -31,7 +32,7 @@ export const TabletNav = () => {
                     currentPath == page.href
                       ? 'underline decoration-[4px]  underline-offset-[36px]'
                       : 'no-underline'
-                  } font-light tracking-[0.1475rem] font-barlow text-base m-2 px-2 `}>
+                  } font-light tracking-[0.1475rem] font-barlow text-base m-2 px-2  `}>
                   {page.page}
                 </Link>
               </li>

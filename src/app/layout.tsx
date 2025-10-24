@@ -3,6 +3,7 @@ import { Bellefair, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '../components/Navbar';
 import { TabletNav } from '@/components/TabletNav';
+import { DesktopNav } from '@/components/DesktopNav';
 
 const bellefair = Bellefair({
   subsets: ['latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className='text-white mx-auto max-w-[1440px] '>
         <Navbar />
         <TabletNav />
+        <DesktopNav />
         {children}
       </body>
     </html>
