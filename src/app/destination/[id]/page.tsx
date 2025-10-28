@@ -1,6 +1,6 @@
 import DestinationBackground from '@/components/DestinationBackground';
 import Title from '@/components/PageSubHeader';
-import SpaceObjectsNav from '@/components/SpaceObjectsNav';
+import SpaceObjectsNav from '@/components/DestinationNav';
 import Image from 'next/image';
 import { prisma } from '@/lib/prisma';
 
