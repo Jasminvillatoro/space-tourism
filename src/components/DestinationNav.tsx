@@ -1,4 +1,4 @@
-import SpaceNavPath from './SpaceNavPath';
+import SpaceNavPath from './DestinationNavPath';
 import { prisma } from '@/lib/prisma';
 
 export default async function SpaceObjectsNav() {
