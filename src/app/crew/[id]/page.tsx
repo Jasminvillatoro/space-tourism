@@ -17,10 +17,12 @@ export default async function CrewPage({
 
   if (!crew) return <h1>Crew not found</h1>;
   return (
-    <>
-      <main className='text-black flex flex-col justify-center items-center pt-10 pb-12'>
-        <CrewBg />
-        <Title order='02' title='MEET YOUR CREW' />
+    <div>
+      <CrewBg />
+      <main className='text-black flex flex-col justify-center items-center pt-10 pb-12 md:hidden'>
+        <h2 className='font-barlow tracking-[0.169rem] text-lg text-white text-center md:text-xl md:text-left lg:text-3xl lg:tracking-[0.295rem] lg:ml-0 lg:font-thin'>
+          <span className='opacity-25'>02</span> MEET YOUR CREW
+        </h2>
         <Image
           src={`/${crew.images}`}
           alt={crew.name}
@@ -40,6 +42,36 @@ export default async function CrewPage({
           {crew.bio}
         </p>
       </main>
-    </>
+      {/* Tablet */}
+      <div className='hidden md:block'>
+        <main className=' text-black flex flex-col justify-center items-center pt-10 pb-12 '>
+          <div className='font-barlow tracking-[0.21125rem] text-white text-center text-xl self-start ml-10 font-thin lg:text-3xl lg:tracking-[0.295rem]'>
+            <h2>
+              <span className='opacity-25 mr-1'>02</span> MEET YOUR CREW
+            </h2>
+          </div>
+          <h2 className='mt-8 font-bellefair text-white opacity-50 text-2xl text-center uppercase tracking-widest]'>
+            {crew.role}
+          </h2>
+          <h1 className='text-white font-bellefair text-[40px] text-center uppercase mt-2 mb-3'>
+            {crew.name}
+          </h1>
+          <p className='w-[458px] h-[84px]font-barlow text-center text-base bg-opacity-60 text-[#D0D6F9] leading-7 font-extralight mb-2 px-4'>
+            {crew.bio}
+          </p>
+          <CrewNav />
+          <div className='flex justify-center items-center mt-10'>
+            <Image
+              src={`/${crew.images}`}
+              alt={crew.name}
+              width={0}
+              height={0}
+              sizes='100vh'
+              className='cover w-[450px] h-[500px]'
+            />
+          </div>
+        </main>
+      </div>
+    </div>
   );
 }

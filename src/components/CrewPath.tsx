@@ -19,7 +19,7 @@ export default function CrewPath({
       <li className='pb-1' key={crew.id}>
         <Link href={ref}>
           <div
-            className={`rounded-full w-3 h-3 hover:bg-white ${
+            className={`rounded-full w-3 h-3 md:w-[10px] md:h-[10px] hover:bg-white ${
               isActive ? 'bg-white' : 'bg-[#979797]'
             }`}></div>
         </Link>
