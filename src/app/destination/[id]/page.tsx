@@ -25,10 +25,11 @@ export default async function SpaceObjectPage({
           className='flex flex-col justify-center items-center md:text-left lg:flex-row lg:gap-32'>
           <div>
             <Title order='01' title='PICK YOUR DESTINATION' />
+            h2
             <div className='flex justify-center items-center lg:mt-14'>
               <Image
                 src={`/${destination.images}`}
-                alt='crew member'
+                alt='Destination Images'
                 width={0}
                 height={0}
                 sizes='100vw'
