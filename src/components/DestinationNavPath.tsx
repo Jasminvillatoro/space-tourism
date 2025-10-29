@@ -20,7 +20,7 @@ export default function SpaceNavPath({
       <li className='pb-1 ' key={destination.id}>
         <Link href={`/destination/${destination.id}`}>
           <p
-            className={`font-barlow text-sm text-[#D0D6F9] pb-2 hover:text-white text-center ${
+            className={`font-barlow text-sm text-[#D0D6F9] pb-2 lg:text-base lg:mr-4 hover:text-white text-center ${
               isActive ? 'border-b-4' : ''
             }`}>
             {destination.name}
