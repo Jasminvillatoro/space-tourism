@@ -2,7 +2,7 @@ import destinationMobile from '../../public/assets/destination/background-destin
 import Image from 'next/image';
 export default function DestinationBackground() {
   return (
-    <div className='absolute h-full w-screen top-0 left-0 right-0 bottom-0 -z-10'>
+    <div className='fixed h-full w-screen top-0 left-0 right-0 bottom-0 -z-10'>
       <Image
         src={destinationMobile}
         alt='destination background'
