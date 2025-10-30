@@ -87,7 +87,7 @@ export default async function CrewPage({
             <h1 className='text-white font-bellefair text-[56px] uppercase mt-2 mb-3'>
               {crew.name}
             </h1>
-            <p className='w-[444px] h-[128px]font-barlow text-lg bg-opacity-60 text-[#D0D6F9] leading-8 font-extralight mb-32'>
+            <p className='w-[444px] h-[128px]font-barlow text-lg bg-opacity-60 text-[#D0D6F9] leading-8 font-extralight mb-28'>
               {crew.bio}
             </p>
             <CrewNav />
@@ -99,7 +99,7 @@ export default async function CrewPage({
               width={0}
               height={0}
               sizes='100vh'
-              className='absolute cover bottom-0 right-20 cover w-[468px] h-[612px]'
+              className='cover w-[450px] h-[600px]'
             />
           </div>
         </main>
