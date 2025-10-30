@@ -43,7 +43,7 @@ export default async function CrewPage({
         </p>
       </main>
       {/* Tablet */}
-      <div className='hidden md:block'>
+      <div className='hidden md:block lg:hidden'>
         <main className=' text-black flex flex-col justify-center items-center pt-10 pb-12 '>
           <div className='font-barlow tracking-[0.21125rem] text-white text-center text-xl self-start ml-10 font-thin lg:text-3xl lg:tracking-[0.295rem]'>
             <h2>
@@ -68,6 +68,38 @@ export default async function CrewPage({
               height={0}
               sizes='100vh'
               className='cover w-[450px] h-[500px]'
+            />
+          </div>
+        </main>
+      </div>
+      {/* Desktop */}
+      <div className='hidden lg:block'>
+        <main className='text-black flex pt-10 pb-12'>
+          <div className='text-left pl-40 mr-40'>
+            <div className='font-barlow text-white font-thin text-3xl tracking-[0.295rem]'>
+              <h2>
+                <span className='opacity-25'>02</span> MEET YOUR CREW
+              </h2>
+            </div>
+            <h2 className='mt-40 font-bellefair text-white opacity-50 text-[32px] uppercase tracking-widest'>
+              {crew.role}
+            </h2>
+            <h1 className='text-white font-bellefair text-[56px] uppercase mt-2 mb-3'>
+              {crew.name}
+            </h1>
+            <p className='w-[444px] h-[128px]font-barlow text-lg bg-opacity-60 text-[#D0D6F9] leading-8 font-extralight mb-40'>
+              {crew.bio}
+            </p>
+            <CrewNav />
+          </div>
+          <div className=''>
+            <Image
+              src={`/${crew.images}`}
+              alt={crew.name}
+              width={0}
+              height={0}
+              sizes='100vh'
+              className='absolute cover bottom-0 right-20 cover w-[568px] h-[712px]'
             />
           </div>
         </main>
