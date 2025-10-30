@@ -25,19 +25,18 @@ export default async function SpaceObjectPage({
           className='flex flex-col justify-center items-center md:text-left lg:flex-row lg:gap-32'>
           <div>
             <Title order='01' title='PICK YOUR DESTINATION' />
-            h2
-            <div className='flex justify-center items-center lg:mt-14'>
+            <div className='flex justify-center items-center lg:mt-12'>
               <Image
                 src={`/${destination.images}`}
                 alt='Destination Images'
                 width={0}
                 height={0}
                 sizes='100vw'
-                className='mt-8 h-[170px] w-[170px] md:h-[300px] md:w-[300px] lg:w-[445px] lg:h-[445px]'
+                className='mt-8 h-[170px] w-[170px] md:h-[300px] md:w-[300px] lg:w-[430px] lg:h-[430px]'
               />
             </div>
           </div>
-          <div className='lg:m-0 lg:p-0 lg:flex lg:flex-col lg:justify-start lg:items-start lg:w-[445px] lg:h-[472px] lg:mt-20'>
+          <div className='lg:m-0 lg:p-0 lg:flex lg:flex-col lg:justify-start lg:items-start lg:w-[445px] lg:h-[472px] lg:mt-18'>
             <DestinationNav />
             <h1 className='font-bellefair text-[56px] text-center md:block md:my-2 lg:text-[100px]'>
               {destination.name}
