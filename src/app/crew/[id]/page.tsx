@@ -44,8 +44,8 @@ export default async function CrewPage({
       </main>
       {/* Tablet */}
       <div className='hidden md:block lg:hidden'>
-        <main className=' text-black flex flex-col justify-center items-center pt-10 pb-12 '>
-          <div className='font-barlow tracking-[0.21125rem] text-white text-center text-xl self-start ml-10 font-thin lg:text-3xl lg:tracking-[0.295rem]'>
+        <main className=' text-black flex flex-col justify-center items-center pt-10 pb-12'>
+          <div className='font-barlow tracking-[0.21125rem] text-white text-center text-xl self-start ml-10 font-thin'>
             <h2>
               <span className='opacity-25 mr-1'>02</span> MEET YOUR CREW
             </h2>
