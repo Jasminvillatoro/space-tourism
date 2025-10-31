@@ -19,7 +19,7 @@ export default function TechPath({
       <li className='pb-1' key={technology.id}>
         <Link href={ref}>
           <div
-            className={`flex justify-center items-center rounded-full w-10 h-10 hover:bg-white border border-['#D0D6F9'] md:w-[60px] md:h-[60px] ${
+            className={`flex justify-center items-center rounded-full w-10 h-10 hover:bg-white border border-['#D0D6F9'] md:w-[60px] md:h-[60px] lg:w-20 lg:h-20 ${
               isActive ? 'bg-white' : 'bg-transparent'
             }`}>
             <div

@@ -9,7 +9,7 @@ export default async function TechNav() {
   });
   return (
     <>
-      <ul className='flex gap-x-4 mt-10 mb-6 font-barlow tracking-[0.169rem] text-xs'>
+      <ul className='flex gap-x-4 mt-10 mb-6 font-barlow tracking-[0.169rem] text-xs lg:flex-col lg:gap-8 lg:gap-x-0'>
         {technology.map((technology) => {
           return (
             <TechPath
