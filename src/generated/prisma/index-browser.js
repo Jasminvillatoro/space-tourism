@@ -142,7 +142,8 @@ exports.Prisma.TechnologyScalarFieldEnum = {
   id: 'id',
   name: 'name',
   images: 'images',
-  description: 'description'
+  description: 'description',
+  desktop_image: 'desktop_image'
 };
 
 exports.Prisma.SortOrder = {

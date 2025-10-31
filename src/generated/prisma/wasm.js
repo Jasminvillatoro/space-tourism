@@ -114,7 +114,8 @@ exports.Prisma.TechnologyScalarFieldEnum = {
   id: 'id',
   name: 'name',
   images: 'images',
-  description: 'description'
+  description: 'description',
+  desktop_image: 'desktop_image'
 };
 
 exports.Prisma.SortOrder = {
@@ -190,13 +191,13 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider      = \"prisma-client-js\"\n  output        = \"../src/generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Destination {\n  id          Int     @id @default(autoincrement())\n  name        String\n  href        String\n  images      String?\n  description String\n  distance    String\n  travel      String\n}\n\nmodel Crew {\n  id     Int     @id @default(autoincrement())\n  name   String\n  images String?\n  role   String\n  bio    String\n}\n\nmodel Technology {\n  id          Int     @id @default(autoincrement())\n  name        String\n  images      String?\n  description String\n}\n",
-  "inlineSchemaHash": "03325e3629ee5d61d5a2cf1a342fdf2b96ffa811768123a981ab5640e3db7609",
+  "inlineSchema": "generator client {\n  provider      = \"prisma-client-js\"\n  output        = \"../src/generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Destination {\n  id          Int     @id @default(autoincrement())\n  name        String\n  href        String\n  images      String?\n  description String\n  distance    String\n  travel      String\n}\n\nmodel Crew {\n  id     Int     @id @default(autoincrement())\n  name   String\n  images String?\n  role   String\n  bio    String\n}\n\nmodel Technology {\n  id            Int     @id @default(autoincrement())\n  name          String\n  images        String?\n  description   String\n  desktop_image String?\n}\n",
+  "inlineSchemaHash": "2662e6dffe754fbc76798b773dd2d56f2a5f659bd5dc4856bafc0f94b6d33cae",
   "copyEngine": true
 }
 config.dirname = '/'
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"Destination\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"href\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"images\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"distance\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"travel\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null},\"Crew\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"images\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"role\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"bio\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null},\"Technology\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"images\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"Destination\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"href\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"images\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"distance\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"travel\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null},\"Crew\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"images\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"role\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"bio\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null},\"Technology\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"images\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"description\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"desktop_image\",\"kind\":\"scalar\",\"type\":\"String\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.engineWasm = {
   getRuntime: async () => require('./query_engine_bg.js'),
