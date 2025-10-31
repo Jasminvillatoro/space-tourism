@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function TechnologyBg() {
   return (
-    <div className='h-full w-screen'>
+    <div className='fixed h-full w-screen -z-10 top-0 left-0 right-0 bottom-0'>
       <Image
         src={techbg}
         alt='destination background'
