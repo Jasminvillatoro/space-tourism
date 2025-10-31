@@ -47,13 +47,12 @@ export default async function Technology({
               <span className='opacity-25 mr-1'>03</span> SPACE LAUNCH 101
             </h2>
           </div>
-          <div className=''>
+          <div className='relative w-full h-[310px]'>
             <Image
               src={`/${technology.images}`}
               alt='technology'
-              width={768}
-              height={310}
-              className='mt-8'
+              fill
+              className='cover mt-8'
             />
           </div>
           <TechNav />
@@ -67,6 +66,10 @@ export default async function Technology({
             {technology.description}
           </p>
         </main>
+      </div>
+      {/* DESKTOP */}
+      <div className='hidden lg:block'>
+        <main className='text-black flex flex-col justify-center items-center pt-10 pb-12'></main>
       </div>
     </div>
   );
