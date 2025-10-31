@@ -3151,6 +3151,7 @@ export namespace Prisma {
     name: string | null
     images: string | null
     description: string | null
+    desktop_image: string | null
   }
 
   export type TechnologyMaxAggregateOutputType = {
@@ -3158,6 +3159,7 @@ export namespace Prisma {
     name: string | null
     images: string | null
     description: string | null
+    desktop_image: string | null
   }
 
   export type TechnologyCountAggregateOutputType = {
@@ -3165,6 +3167,7 @@ export namespace Prisma {
     name: number
     images: number
     description: number
+    desktop_image: number
     _all: number
   }
 
@@ -3182,6 +3185,7 @@ export namespace Prisma {
     name?: true
     images?: true
     description?: true
+    desktop_image?: true
   }
 
   export type TechnologyMaxAggregateInputType = {
@@ -3189,6 +3193,7 @@ export namespace Prisma {
     name?: true
     images?: true
     description?: true
+    desktop_image?: true
   }
 
   export type TechnologyCountAggregateInputType = {
@@ -3196,6 +3201,7 @@ export namespace Prisma {
     name?: true
     images?: true
     description?: true
+    desktop_image?: true
     _all?: true
   }
 
@@ -3290,6 +3296,7 @@ export namespace Prisma {
     name: string
     images: string | null
     description: string
+    desktop_image: string | null
     _count: TechnologyCountAggregateOutputType | null
     _avg: TechnologyAvgAggregateOutputType | null
     _sum: TechnologySumAggregateOutputType | null
@@ -3316,6 +3323,7 @@ export namespace Prisma {
     name?: boolean
     images?: boolean
     description?: boolean
+    desktop_image?: boolean
   }, ExtArgs["result"]["technology"]>
 
   export type TechnologySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -3323,6 +3331,7 @@ export namespace Prisma {
     name?: boolean
     images?: boolean
     description?: boolean
+    desktop_image?: boolean
   }, ExtArgs["result"]["technology"]>
 
   export type TechnologySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -3330,6 +3339,7 @@ export namespace Prisma {
     name?: boolean
     images?: boolean
     description?: boolean
+    desktop_image?: boolean
   }, ExtArgs["result"]["technology"]>
 
   export type TechnologySelectScalar = {
@@ -3337,9 +3347,10 @@ export namespace Prisma {
     name?: boolean
     images?: boolean
     description?: boolean
+    desktop_image?: boolean
   }
 
-  export type TechnologyOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "images" | "description", ExtArgs["result"]["technology"]>
+  export type TechnologyOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "images" | "description" | "desktop_image", ExtArgs["result"]["technology"]>
 
   export type $TechnologyPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Technology"
@@ -3349,6 +3360,7 @@ export namespace Prisma {
       name: string
       images: string | null
       description: string
+      desktop_image: string | null
     }, ExtArgs["result"]["technology"]>
     composites: {}
   }
@@ -3776,6 +3788,7 @@ export namespace Prisma {
     readonly name: FieldRef<"Technology", 'String'>
     readonly images: FieldRef<"Technology", 'String'>
     readonly description: FieldRef<"Technology", 'String'>
+    readonly desktop_image: FieldRef<"Technology", 'String'>
   }
     
 
@@ -4184,7 +4197,8 @@ export namespace Prisma {
     id: 'id',
     name: 'name',
     images: 'images',
-    description: 'description'
+    description: 'description',
+    desktop_image: 'desktop_image'
   };
 
   export type TechnologyScalarFieldEnum = (typeof TechnologyScalarFieldEnum)[keyof typeof TechnologyScalarFieldEnum]
@@ -4390,6 +4404,7 @@ export namespace Prisma {
     name?: StringFilter<"Technology"> | string
     images?: StringNullableFilter<"Technology"> | string | null
     description?: StringFilter<"Technology"> | string
+    desktop_image?: StringNullableFilter<"Technology"> | string | null
   }
 
   export type TechnologyOrderByWithRelationInput = {
@@ -4397,6 +4412,7 @@ export namespace Prisma {
     name?: SortOrder
     images?: SortOrderInput | SortOrder
     description?: SortOrder
+    desktop_image?: SortOrderInput | SortOrder
   }
 
   export type TechnologyWhereUniqueInput = Prisma.AtLeast<{
@@ -4407,6 +4423,7 @@ export namespace Prisma {
     name?: StringFilter<"Technology"> | string
     images?: StringNullableFilter<"Technology"> | string | null
     description?: StringFilter<"Technology"> | string
+    desktop_image?: StringNullableFilter<"Technology"> | string | null
   }, "id">
 
   export type TechnologyOrderByWithAggregationInput = {
@@ -4414,6 +4431,7 @@ export namespace Prisma {
     name?: SortOrder
     images?: SortOrderInput | SortOrder
     description?: SortOrder
+    desktop_image?: SortOrderInput | SortOrder
     _count?: TechnologyCountOrderByAggregateInput
     _avg?: TechnologyAvgOrderByAggregateInput
     _max?: TechnologyMaxOrderByAggregateInput
@@ -4429,6 +4447,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"Technology"> | string
     images?: StringNullableWithAggregatesFilter<"Technology"> | string | null
     description?: StringWithAggregatesFilter<"Technology"> | string
+    desktop_image?: StringNullableWithAggregatesFilter<"Technology"> | string | null
   }
 
   export type DestinationCreateInput = {
@@ -4555,6 +4574,7 @@ export namespace Prisma {
     name: string
     images?: string | null
     description: string
+    desktop_image?: string | null
   }
 
   export type TechnologyUncheckedCreateInput = {
@@ -4562,12 +4582,14 @@ export namespace Prisma {
     name: string
     images?: string | null
     description: string
+    desktop_image?: string | null
   }
 
   export type TechnologyUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     images?: NullableStringFieldUpdateOperationsInput | string | null
     description?: StringFieldUpdateOperationsInput | string
+    desktop_image?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type TechnologyUncheckedUpdateInput = {
@@ -4575,6 +4597,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     images?: NullableStringFieldUpdateOperationsInput | string | null
     description?: StringFieldUpdateOperationsInput | string
+    desktop_image?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type TechnologyCreateManyInput = {
@@ -4582,12 +4605,14 @@ export namespace Prisma {
     name: string
     images?: string | null
     description: string
+    desktop_image?: string | null
   }
 
   export type TechnologyUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     images?: NullableStringFieldUpdateOperationsInput | string | null
     description?: StringFieldUpdateOperationsInput | string
+    desktop_image?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type TechnologyUncheckedUpdateManyInput = {
@@ -4595,6 +4620,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     images?: NullableStringFieldUpdateOperationsInput | string | null
     description?: StringFieldUpdateOperationsInput | string
+    desktop_image?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -4770,6 +4796,7 @@ export namespace Prisma {
     name?: SortOrder
     images?: SortOrder
     description?: SortOrder
+    desktop_image?: SortOrder
   }
 
   export type TechnologyAvgOrderByAggregateInput = {
@@ -4781,6 +4808,7 @@ export namespace Prisma {
     name?: SortOrder
     images?: SortOrder
     description?: SortOrder
+    desktop_image?: SortOrder
   }
 
   export type TechnologyMinOrderByAggregateInput = {
@@ -4788,6 +4816,7 @@ export namespace Prisma {
     name?: SortOrder
     images?: SortOrder
     description?: SortOrder
+    desktop_image?: SortOrder
   }
 
   export type TechnologySumOrderByAggregateInput = {
