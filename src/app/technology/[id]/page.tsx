@@ -68,7 +68,7 @@ export default async function Technology({
         </main>
       </div>
       {/* DESKTOP */}
-      <div className='hidden lg:block mt-32'>
+      <div className='hidden lg:block mt-24'>
         <main className='relative text-black'>
           <div className='font-barlow tracking-[0.295rem] text-white text-left text-3xl font-thin absolute left-16 -top-16'>
             <h2>
